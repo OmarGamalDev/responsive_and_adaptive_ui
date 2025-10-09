@@ -9,9 +9,20 @@ class FlexibleTest extends StatelessWidget {
       body: Column(
         children: [
           Flexible(
-            child: Container(color: Colors.blue, width: 200, height: 100),
+            child: FittedBox(
+              child: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.add, size: 100),
+              ),
+            ),
           ),
-          Container(color: Colors.red, width: 200, height: 100),
+          Expanded(
+            child: Container(
+              height: 100,
+              color: Colors.red,
+              child: FittedBox(fit: BoxFit.scaleDown, child: Icon(Icons.add)),
+            ),
+          ),
           Container(color: Colors.black, width: 200, height: 100),
           Container(color: Colors.green, width: 200, height: 100),
         ],
