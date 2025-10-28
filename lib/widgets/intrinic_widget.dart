@@ -16,24 +16,16 @@ class IntrinsicWidget extends StatelessWidget {
                   Expanded(
                     child: Container(
                       color: Colors.blue,
-                      child: Column(
-                        children: [
-                          SizedBox(height: 20),
-                          SizedBox(height: 20),
-                          SizedBox(height: 20),
-                          SizedBox(height: 20),
-                          SizedBox(height: 20),
-                        ],
-                      ),
+                      child: SizedBox(height: 200),
                     ),
                   ),
                   SizedBox(width: 20),
                   Expanded(
                     child: Column(
                       children: [
-                        Container(color: Colors.red, height: 60),
+                        Expanded(child: Container(color: Colors.red)),
                         SizedBox(height: 20),
-                        Container(color: Colors.black, height: 50),
+                        Expanded(child: Container(color: Colors.black)),
                       ],
                     ),
                   ),

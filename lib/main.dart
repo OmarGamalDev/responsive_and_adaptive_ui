@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_and_adaptive_ui/widgets/intrinic_widget.dart';
+import 'package:responsive_and_adaptive_ui/Practice%20in%20Adaptive%20Ui/adaptive_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,6 +10,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: IntrinsicWidget());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: AdaptiveView());
   }
 }

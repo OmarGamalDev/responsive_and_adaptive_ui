@@ -8,7 +8,7 @@ class MediaQueryTest extends StatelessWidget {
     var screenHeight = MediaQuery.of(context).size.height;
     var appBar = AppBar(title: const Text('MediaQuery Test'));
     var statusBarHeight = MediaQuery.of(context).padding.top;
-    var availableHeight = screenHeight - appBar.preferredSize.height - statusBarHeight;
+    var availableHeight = screenHeight - appBar.preferredSize.height- statusBarHeight;
     return Scaffold(
       appBar: appBar,
       body: Column(
