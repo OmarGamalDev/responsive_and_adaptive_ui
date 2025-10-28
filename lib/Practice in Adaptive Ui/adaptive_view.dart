@@ -1,34 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_and_adaptive_ui/Practice%20in%20Adaptive%20Ui/widgets/adaptive_view_body.dart';
+import 'package:responsive_and_adaptive_ui/Practice%20in%20Adaptive%20Ui/widgets/appBar%20and%20Drawer/custom_app_bar.dart';
+import 'package:responsive_and_adaptive_ui/Practice%20in%20Adaptive%20Ui/widgets/appBar%20and%20Drawer/custom_drawer.dart';
 
-class AdaptiveView extends StatelessWidget {
+class AdaptiveView extends StatefulWidget {
   const AdaptiveView({super.key});
+
+  @override
+  State<AdaptiveView> createState() => _AdaptiveViewState();
+}
+
+class _AdaptiveViewState extends State<AdaptiveView> {
+  GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
       backgroundColor: Color(0xffD8D8DB),
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(60),
-        child: const CustomAppBar(),
+        child: CustomAppBar(scaffoldKey: scaffoldKey),
       ),
-      drawer: Drawer(),
+      drawer: const CustomDrawer(),
       body: AdaptiveViewBody(),
-    );
-  }
-}
-
-class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return AppBar(
-      backgroundColor: Colors.black,
-      leading: IconButton(
-        onPressed: () {},
-        icon: Icon(Icons.menu, color: Colors.white),
-      ),
     );
   }
 }
