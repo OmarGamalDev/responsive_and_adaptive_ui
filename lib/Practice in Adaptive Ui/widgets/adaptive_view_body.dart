@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_and_adaptive_ui/Practice%20in%20Adaptive%20Ui/widgets/custom_grid_builder.dart';
+import 'package:responsive_and_adaptive_ui/Practice%20in%20Adaptive%20Ui/widgets/Grid/custom_grid_builder.dart';
+import 'package:responsive_and_adaptive_ui/Practice%20in%20Adaptive%20Ui/widgets/ListView/custom_list_builder.dart';
 
 class AdaptiveViewBody extends StatelessWidget {
   const AdaptiveViewBody({super.key});
@@ -10,9 +11,11 @@ class AdaptiveViewBody extends StatelessWidget {
       slivers: [
         SliverToBoxAdapter(child: SizedBox(height: 16)),
         CustomGridBuilder(),
+        CustomSliverListView(),
       ],
     );
   }
 }
+
 
 

@@ -12,7 +12,7 @@ class AdaptiveView extends StatelessWidget {
         preferredSize: const Size.fromHeight(60),
         child: const CustomAppBar(),
       ),
-      // drawer: Drawer(),
+      drawer: Drawer(),
       body: AdaptiveViewBody(),
     );
   }
