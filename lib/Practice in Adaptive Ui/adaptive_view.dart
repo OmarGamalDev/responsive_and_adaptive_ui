@@ -16,8 +16,8 @@ class _AdaptiveViewState extends State<AdaptiveView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: scaffoldKey,
       backgroundColor: Color(0xffD8D8DB),
+      key: scaffoldKey,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(60),
         child: CustomAppBar(scaffoldKey: scaffoldKey),
