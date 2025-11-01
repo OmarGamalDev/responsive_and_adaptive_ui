@@ -20,7 +20,15 @@ class _AdaptiveViewState extends State<AdaptiveView> {
       key: scaffoldKey,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(60),
-        child: CustomAppBar(scaffoldKey: scaffoldKey),
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            if (constraints.maxWidth < 900) {
+              return CustomAppBar(scaffoldKey: scaffoldKey);
+            } else {
+              return SizedBox.shrink();
+            }
+          },
+        ),
       ),
       drawer: const CustomDrawer(),
       body: AdaptiveViewBody(),

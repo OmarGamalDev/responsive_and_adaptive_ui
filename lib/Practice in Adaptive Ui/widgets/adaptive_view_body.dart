@@ -16,7 +16,7 @@ class AdaptiveViewBody extends StatelessWidget {
           return DesktopLayout();
         } else {
           return TabletLayout();
-        }
+        } 
       },
     );
   }
